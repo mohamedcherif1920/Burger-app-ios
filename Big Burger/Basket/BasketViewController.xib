@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BasketViewController" customModule="Big_Burger" customModuleProvider="target">
+            <connections>
+                <outlet property="backButton" destination="3em-Dv-hIj" id="trD-8Z-2Pe"/>
+                <outlet property="basketTableView" destination="lW4-dC-KpO" id="Qh9-RR-dqg"/>
+                <outlet property="clearBasketButton" destination="bU0-lx-hM5" id="bZz-tV-zuX"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lW4-dC-KpO">
+                    <rect key="frame" x="0.0" y="70" width="414" height="563"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Rgk-Rg-v9J"/>
+                        <outlet property="delegate" destination="-1" id="d0J-KJ-qV0"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bU0-lx-hM5">
+                    <rect key="frame" x="77" y="673" width="260" height="43"/>
+                    <color key="backgroundColor" red="0.094117647060000004" green="0.63137254899999995" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="43" id="1O7-UI-Gws"/>
+                        <constraint firstAttribute="height" constant="43" id="C5e-hp-cnb"/>
+                        <constraint firstAttribute="width" constant="260" id="rL7-8Z-SjW"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="260" id="wmp-FZ-DuP"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="16"/>
+                    <state key="normal" title="Vider  panier">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3em-Dv-hIj">
+                    <rect key="frame" x="15" y="20" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="LOh-F9-exV"/>
+                        <constraint firstAttribute="width" constant="40" id="n3P-aP-xWC"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="qA1-Db-2BD"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="qmV-oh-RvS"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="backIcon"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Votre panier" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZA3-Jj-xos">
+                    <rect key="frame" x="139" y="25.666666666666664" width="136" height="28.666666666666664"/>
+                    <fontDescription key="fontDescription" name="Palatino-BoldItalic" family="Palatino" pointSize="25"/>
+                    <color key="textColor" red="0.094117647060000004" green="0.63137254899999995" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="bU0-lx-hM5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="6Us-dy-boo"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="bU0-lx-hM5" secondAttribute="bottom" constant="20" id="QLG-Mi-Aod"/>
+                <constraint firstItem="bU0-lx-hM5" firstAttribute="top" secondItem="lW4-dC-KpO" secondAttribute="bottom" constant="40" id="acz-WL-pGe"/>
+                <constraint firstItem="lW4-dC-KpO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="bQM-Dc-9hh"/>
+                <constraint firstItem="3em-Dv-hIj" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="cYC-CD-751"/>
+                <constraint firstItem="lW4-dC-KpO" firstAttribute="top" secondItem="3em-Dv-hIj" secondAttribute="bottom" constant="10" id="cwc-R2-HCY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lW4-dC-KpO" secondAttribute="trailing" id="pjo-JT-WMl"/>
+                <constraint firstItem="ZA3-Jj-xos" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="rJ0-bQ-tGY"/>
+                <constraint firstItem="3em-Dv-hIj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="skx-Qo-6dT"/>
+                <constraint firstItem="ZA3-Jj-xos" firstAttribute="centerY" secondItem="3em-Dv-hIj" secondAttribute="centerY" id="zsw-MV-sXB"/>
+            </constraints>
+            <point key="canvasLocation" x="15.942028985507248" y="52.989130434782609"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="backIcon" width="70.870002746582031" height="70.870002746582031"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
